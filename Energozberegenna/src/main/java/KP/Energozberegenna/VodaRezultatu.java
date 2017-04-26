@@ -4,6 +4,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,6 +25,8 @@ public class VodaRezultatu extends JFrame {
 	private int k_PunktivRekomendaciy = 0;
 
 	String s_Recomendacia = "1.   Закривати воду, якщо не користуєтеся водою тут і зараз. Наприклад закривайте кран під час гоління, чищення зубів, зняття шкірки з овочів і фруктів, або встановіть електронний змішувач.\r\n2.   Ощадливіше користуватися змішувачем у вигляді ручки, ніж стандартними двома кранами. Можна встановити комфортну температуру, вмикати та вимикати кран одним рухом, а не крутити крани щоразу, марно витрачаючи воду та гаючи час.\r\n3.   Необхідно перекривати вентиль для води, якщо приміщення залишають на кілька днів.\r\n4.   Слідкуйте за станом своєї сантехніки! Якщо ваш кран протікає – ви втрачаєте до 500 літрів води за добу. Якщо витікає гаряча вода – ви ще й марно витрачаєте газ, який іде на її підігрівання! За день з несправного туалетного бачка може витекти до 2 000 літрів води. \r\n5.   Встановіть у туалеті економний зливний бачок, з двома клавішами змиву. Так ви будете використовувати всього 6 або навіть 3 літри води замість 10-12 за одне зливання.\r\n6.   Придбайте і встановіть спеціальну насадку-розпилювач типу «душ» на кран у кухні.\r\n";
+
+	private JLabel l_fonVodaRecomendacii;
 
 	public VodaRezultatu(String s, int i_putanna1, int i_putanna2, int i_slider_putanna3, int i_slider_putanna4,
 			int i_slider_putanna5, int i_putanna6, int i_slider_putanna7) {
@@ -46,8 +49,9 @@ public class VodaRezultatu extends JFrame {
 		getContentPane().add(b_Menu);
 
 		l_Hapka = new JLabel("Вам необхідно:");
+		l_Hapka.setForeground(Color.YELLOW);
 		l_Hapka.setHorizontalAlignment(SwingConstants.CENTER);
-		l_Hapka.setFont(new Font("Palatino Linotype", Font.ITALIC, 25));
+		l_Hapka.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 28));
 		l_Hapka.setBounds(84, 9, 601, 35);
 		getContentPane().add(l_Hapka);
 
@@ -104,6 +108,11 @@ public class VodaRezultatu extends JFrame {
 		scrollPane_Rekomendacia.setViewportView(textPane_Rekomendacia);
 		textPane_Rekomendacia.setText(s_Recomendacia);
 
+		l_fonVodaRecomendacii = new JLabel("");
+		l_fonVodaRecomendacii.setBounds(0, 0, 794, 565);
+		l_fonVodaRecomendacii.setIcon(new ImageIcon("res/fon_VodaRecomendacii.jpg"));
+		getContentPane().add(l_fonVodaRecomendacii);
+		
 		setVisible(true);
 	}
 

@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -14,6 +15,7 @@ import javax.swing.JSlider;
 import javax.swing.SwingConstants;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.Color;
 
 public class VodaOputuvanna extends JFrame {
 
@@ -72,6 +74,8 @@ public class VodaOputuvanna extends JFrame {
 	private int i_putanna2;
 	private int i_putanna6;
 
+	private JLabel l_fonVodaOputuvanna;
+
 	public VodaOputuvanna(String s) {
 		super(s);
 
@@ -92,7 +96,8 @@ public class VodaOputuvanna extends JFrame {
 		getContentPane().add(b_Nazad);
 
 		l_Hapka = new JLabel("Пройдіть, будь ласка, опитування");
-		l_Hapka.setFont(new Font("Palatino Linotype", Font.ITALIC, 25));
+		l_Hapka.setForeground(Color.ORANGE);
+		l_Hapka.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 25));
 		l_Hapka.setHorizontalAlignment(SwingConstants.CENTER);
 		l_Hapka.setBounds(90, 4, 595, 30);
 		getContentPane().add(l_Hapka);
@@ -140,6 +145,7 @@ public class VodaOputuvanna extends JFrame {
 		getContentPane().add(l_putanna7);
 
 		radioB_putanna1_1 = new JRadioButton("Центральне");
+		radioB_putanna1_1.setOpaque(false);
 		radioB_putanna1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				i_putanna1 = 1;
@@ -150,6 +156,7 @@ public class VodaOputuvanna extends JFrame {
 		getContentPane().add(radioB_putanna1_1);
 
 		radioB_putanna1_2 = new JRadioButton("Автономне");
+		radioB_putanna1_2.setOpaque(false);
 		radioB_putanna1_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna1_2.setBounds(506, 76, 249, 25);
 		getContentPane().add(radioB_putanna1_2);
@@ -160,6 +167,8 @@ public class VodaOputuvanna extends JFrame {
 		});
 
 		radioB_putanna2_1 = new JRadioButton("Жодного");
+		radioB_putanna2_1.setForeground(Color.BLACK);
+		radioB_putanna2_1.setOpaque(false);
 		radioB_putanna2_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna2_1.setBounds(8, 140, 97, 25);
 		getContentPane().add(radioB_putanna2_1);
@@ -170,6 +179,8 @@ public class VodaOputuvanna extends JFrame {
 		});
 
 		radioB_putanna2_2 = new JRadioButton("Тільки на гарячу воду");
+		radioB_putanna2_2.setForeground(Color.BLACK);
+		radioB_putanna2_2.setOpaque(false);
 		radioB_putanna2_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna2_2.setBounds(129, 140, 195, 25);
 		getContentPane().add(radioB_putanna2_2);
@@ -180,6 +191,8 @@ public class VodaOputuvanna extends JFrame {
 		});
 
 		radioB_putanna2_3 = new JRadioButton("Тільки на холодну воду");
+		radioB_putanna2_3.setForeground(Color.BLACK);
+		radioB_putanna2_3.setOpaque(false);
 		radioB_putanna2_3.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna2_3.setBounds(341, 140, 205, 25);
 		getContentPane().add(radioB_putanna2_3);
@@ -190,6 +203,8 @@ public class VodaOputuvanna extends JFrame {
 		});
 
 		radioB_putanna2_4 = new JRadioButton("І на гарячу, і на холодну");
+		radioB_putanna2_4.setForeground(Color.BLACK);
+		radioB_putanna2_4.setOpaque(false);
 		radioB_putanna2_4.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna2_4.setBounds(561, 140, 233, 25);
 		getContentPane().add(radioB_putanna2_4);
@@ -200,63 +215,77 @@ public class VodaOputuvanna extends JFrame {
 		});
 
 		slider_putanna3 = new JSlider();
+		slider_putanna3.setOpaque(false);
 		slider_putanna3.setBounds(8, 196, 770, 26);
 		getContentPane().add(slider_putanna3);
 
 		l_slider_putanna3_1 = new JLabel("Раз на день");
+		l_slider_putanna3_1.setForeground(Color.BLACK);
 		l_slider_putanna3_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna3_1.setBounds(8, 222, 115, 16);
 		getContentPane().add(l_slider_putanna3_1);
 
 		l_slider_putanna3_2 = new JLabel("Раз на тиждень");
+		l_slider_putanna3_2.setForeground(Color.BLACK);
 		l_slider_putanna3_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna3_2.setBounds(324, 222, 143, 16);
 		getContentPane().add(l_slider_putanna3_2);
 
 		l_slider_putanna3_3 = new JLabel("Раз на 2 тижні і більше");
+		l_slider_putanna3_3.setForeground(Color.BLACK);
 		l_slider_putanna3_3.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna3_3.setBounds(587, 223, 195, 16);
 		getContentPane().add(l_slider_putanna3_3);
 
 		slider_putanna4 = new JSlider();
+		slider_putanna4.setOpaque(false);
 		slider_putanna4.setBounds(8, 264, 770, 26);
 		getContentPane().add(slider_putanna4);
 
 		l_slider_putanna4_1 = new JLabel("Раз на день");
+		l_slider_putanna4_1.setForeground(Color.BLACK);
 		l_slider_putanna4_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna4_1.setBounds(8, 290, 115, 16);
 		getContentPane().add(l_slider_putanna4_1);
 
 		l_slider_putanna4_2 = new JLabel("Раз на тиждень");
+		l_slider_putanna4_2.setForeground(Color.BLACK);
 		l_slider_putanna4_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna4_2.setBounds(324, 290, 143, 16);
 		getContentPane().add(l_slider_putanna4_2);
 
 		l_slider_putanna4_3 = new JLabel("Раз на 2 тижні і більше");
+		l_slider_putanna4_3.setForeground(Color.BLACK);
 		l_slider_putanna4_3.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna4_3.setBounds(587, 291, 195, 16);
 		getContentPane().add(l_slider_putanna4_3);
 
 		slider_putanna5 = new JSlider();
+		slider_putanna5.setOpaque(false);
 		slider_putanna5.setBounds(8, 329, 770, 26);
 		getContentPane().add(slider_putanna5);
 
 		l_slider_putanna5_1 = new JLabel("Раз на день");
+		l_slider_putanna5_1.setForeground(Color.BLACK);
 		l_slider_putanna5_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna5_1.setBounds(8, 355, 115, 16);
 		getContentPane().add(l_slider_putanna5_1);
 
 		l_slider_putanna5_2 = new JLabel("Раз на тиждень");
+		l_slider_putanna5_2.setForeground(Color.BLACK);
 		l_slider_putanna5_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna5_2.setBounds(324, 355, 143, 16);
 		getContentPane().add(l_slider_putanna5_2);
 
 		l_slider_putanna5_3 = new JLabel("Раз на 2 тижні і більше");
+		l_slider_putanna5_3.setForeground(Color.BLACK);
 		l_slider_putanna5_3.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna5_3.setBounds(587, 356, 195, 16);
 		getContentPane().add(l_slider_putanna5_3);
 
 		radioB_putanna6_1 = new JRadioButton("Так, я маю авто");
+		radioB_putanna6_1.setForeground(Color.BLACK);
+		radioB_putanna6_1.setOpaque(false);
 		radioB_putanna6_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna6_1.setBounds(90, 402, 322, 25);
 		getContentPane().add(radioB_putanna6_1);
@@ -267,6 +296,8 @@ public class VodaOputuvanna extends JFrame {
 		});
 
 		radioB_putanna6_2 = new JRadioButton("Ні, не маю");
+		radioB_putanna6_2.setForeground(Color.BLACK);
+		radioB_putanna6_2.setOpaque(false);
 		radioB_putanna6_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna6_2.setBounds(506, 402, 249, 25);
 		getContentPane().add(radioB_putanna6_2);
@@ -277,20 +308,24 @@ public class VodaOputuvanna extends JFrame {
 		});
 
 		l_slider_putanna7_1 = new JLabel("Взагалі не займаюсь");
+		l_slider_putanna7_1.setForeground(Color.BLACK);
 		l_slider_putanna7_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna7_1.setBounds(8, 479, 158, 16);
 		getContentPane().add(l_slider_putanna7_1);
 
 		slider_putanna7 = new JSlider();
+		slider_putanna7.setOpaque(false);
 		slider_putanna7.setBounds(8, 453, 770, 26);
 		getContentPane().add(slider_putanna7);
 
 		l_slider_putanna7_2 = new JLabel("Є маленька грядочка");
+		l_slider_putanna7_2.setForeground(Color.BLACK);
 		l_slider_putanna7_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna7_2.setBounds(307, 479, 181, 16);
 		getContentPane().add(l_slider_putanna7_2);
 
 		l_slider_putanna7_3 = new JLabel("Постійно займаюсь");
+		l_slider_putanna7_3.setForeground(Color.BLACK);
 		l_slider_putanna7_3.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna7_3.setBounds(624, 480, 158, 16);
 		getContentPane().add(l_slider_putanna7_3);
@@ -333,6 +368,11 @@ public class VodaOputuvanna extends JFrame {
 		b_Gotovo.setBounds(528, 524, 266, 41);
 		getContentPane().add(b_Gotovo);
 
+		l_fonVodaOputuvanna = new JLabel("");
+		l_fonVodaOputuvanna.setBounds(0, 0, 794, 565);
+		l_fonVodaOputuvanna.setIcon(new ImageIcon("res/fon_VodaOputuvanna.jpg"));
+		getContentPane().add(l_fonVodaOputuvanna);
+		
 		slider_putanna3.addChangeListener(slider3);
 		slider_putanna4.addChangeListener(slider4);
 		slider_putanna5.addChangeListener(slider5);
