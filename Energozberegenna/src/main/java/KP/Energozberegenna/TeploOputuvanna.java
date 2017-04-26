@@ -128,6 +128,34 @@ public class TeploOputuvanna extends JFrame {
 				i_putanna1 = 2;
 			}
 		});
+		
+		l_putanna3 = new JLabel("Яке у Вас теплопостачання ?");
+		l_putanna3.setHorizontalAlignment(SwingConstants.CENTER);
+		l_putanna3.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		l_putanna3.setBounds(28, 238, 727, 30);
+		getContentPane().add(l_putanna3);
+
+		radioB_putanna3_1 = new JRadioButton("Центральне");
+		radioB_putanna3_1.setOpaque(false);
+		radioB_putanna3_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
+		radioB_putanna3_1.setBounds(90, 277, 322, 25);
+		getContentPane().add(radioB_putanna3_1);
+		radioB_putanna3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				i_putanna3 = 1;
+			}
+		});
+		
+		radioB_putanna3_2 = new JRadioButton("Автономне");
+		radioB_putanna3_2.setOpaque(false);
+		radioB_putanna3_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
+		radioB_putanna3_2.setBounds(506, 277, 249, 25);
+		getContentPane().add(radioB_putanna3_2);
+		radioB_putanna3_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				i_putanna3 = 2;
+			}
+		});
 
 		slider_putanna4 = new JSlider();
 		slider_putanna4.setOpaque(false);
@@ -173,11 +201,11 @@ public class TeploOputuvanna extends JFrame {
 		group_putanna1 = new ButtonGroup();
 		group_putanna1.add(radioB_putanna1_1);
 		group_putanna1.add(radioB_putanna1_2);
-
+		
 		group_putanna3 = new ButtonGroup();
 		group_putanna3.add(radioB_putanna3_1);
 		group_putanna3.add(radioB_putanna3_2);
-
+		
 		group_putanna5 = new ButtonGroup();
 		group_putanna5.add(radioB_putanna5_1);
 		group_putanna5.add(radioB_putanna5_2);
@@ -185,24 +213,25 @@ public class TeploOputuvanna extends JFrame {
 		b_Gotovo = new JButton("Готово");
 		b_Gotovo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				String s_putanna2_1 = choice_putanna1_1.getSelectedItem();
 				String s_putanna2_2 = choice_putanna1_2.getSelectedItem();
-				
-				 System.out.println("s_putanna1 " + i_putanna1);
-				 System.out.println("s_putanna2_1 " + s_putanna2_1);
-				 System.out.println("s_putanna2_2 " + s_putanna2_2);
-				 System.out.println("i_putanna3 " + i_putanna3);
-				 System.out.println("i_slider_putanna4 " + i_slider_putanna4);
-				 System.out.println("i_slider_putanna5 " + i_putanna5); 
+
+				int i_putanna2_1 = Integer.parseInt(s_putanna2_1);
+
+				System.out.println("s_putanna1 " + i_putanna1);
+				System.out.println("s_putanna2_1 " + i_putanna2_1);
+				System.out.println("s_putanna2_2 " + s_putanna2_2);
+				System.out.println("i_putanna3 " + i_putanna3);
+				System.out.println("i_slider_putanna4 " + i_slider_putanna4);
+				System.out.println("i_slider_putanna5 " + i_putanna5);
+				System.out.println("");
 
 				if (i_putanna1 == 0 || i_putanna3 == 0 || i_putanna5 == 0) {
 					JOptionPane.showMessageDialog(null, "Помилка введення !");
 				} else {
-					// new VodaRezultatu("Водозбереження. Результат",i_putanna1,
-					// i_putanna2, i_slider_putanna3, i_slider_putanna4,
-					// i_slider_putanna5,
-					// i_putanna6, i_slider_putanna7);
+					new TeploOputuvanna1("Теплозбереження", i_putanna1, i_putanna2_1, s_putanna2_2, i_putanna3,
+							i_slider_putanna4, i_putanna5);
 					setVisible(false);
 				}
 
@@ -222,7 +251,7 @@ public class TeploOputuvanna extends JFrame {
 		getContentPane().add(choice_putanna1_1);
 		choice_putanna1_1.add("1");
 		choice_putanna1_1.add("2");
-		choice_putanna1_1.add("");
+		choice_putanna1_1.add("3");
 		choice_putanna1_1.add("4");
 		choice_putanna1_1.add("5");
 
@@ -251,34 +280,6 @@ public class TeploOputuvanna extends JFrame {
 		choice_putanna1_2.add("80 Х 90 м2");
 		choice_putanna1_2.add("90 Х 100 м2");
 		choice_putanna1_2.add("Понад 100 м2");
-
-		l_putanna3 = new JLabel("Яке у Вас теплопостачання ?");
-		l_putanna3.setHorizontalAlignment(SwingConstants.CENTER);
-		l_putanna3.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		l_putanna3.setBounds(28, 238, 727, 30);
-		getContentPane().add(l_putanna3);
-
-		radioB_putanna3_1 = new JRadioButton("Центральне");
-		radioB_putanna3_1.setOpaque(false);
-		radioB_putanna3_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
-		radioB_putanna3_1.setBounds(90, 277, 322, 25);
-		getContentPane().add(radioB_putanna3_1);
-		radioB_putanna3_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				i_putanna3 = 1;
-			}
-		});
-
-		radioB_putanna3_2 = new JRadioButton("Автономне");
-		radioB_putanna3_2.setOpaque(false);
-		radioB_putanna3_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
-		radioB_putanna3_2.setBounds(506, 277, 249, 25);
-		getContentPane().add(radioB_putanna3_2);
-		radioB_putanna3_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				i_putanna3 = 2;
-			}
-		});
 
 		slider_putanna4.addChangeListener(slider4);
 
