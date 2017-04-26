@@ -109,7 +109,7 @@ public class ElektroenergiaOputuvanna extends JFrame {
 		getContentPane().add(b_Utocnenna6);
 
 		l_Hapka = new JLabel("Пройдіть, будь ласка, опитування");
-		l_Hapka.setForeground(Color.ORANGE);
+		l_Hapka.setForeground(Color.BLUE);
 		l_Hapka.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 25));
 		l_Hapka.setHorizontalAlignment(SwingConstants.CENTER);
 		l_Hapka.setBounds(90, 4, 595, 30);
@@ -152,6 +152,7 @@ public class ElektroenergiaOputuvanna extends JFrame {
 		getContentPane().add(l_putanna5);
 
 		radioB_putanna1_1 = new JRadioButton("Так, використовую");
+		radioB_putanna1_1.setForeground(Color.BLACK);
 		radioB_putanna1_1.setOpaque(false);
 		radioB_putanna1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -163,6 +164,7 @@ public class ElektroenergiaOputuvanna extends JFrame {
 		getContentPane().add(radioB_putanna1_1);
 
 		radioB_putanna1_2 = new JRadioButton("Ні, не використовую");
+		radioB_putanna1_2.setForeground(Color.BLACK);
 		radioB_putanna1_2.setOpaque(false);
 		radioB_putanna1_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna1_2.setBounds(506, 122, 249, 25);
@@ -257,7 +259,7 @@ public class ElektroenergiaOputuvanna extends JFrame {
 
 		l_Hapka1 = new JLabel("для рекомендацій по оптимізації освітлення:");
 		l_Hapka1.setHorizontalAlignment(SwingConstants.CENTER);
-		l_Hapka1.setForeground(Color.ORANGE);
+		l_Hapka1.setForeground(Color.BLUE);
 		l_Hapka1.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 25));
 		l_Hapka1.setBounds(100, 40, 595, 30);
 		getContentPane().add(l_Hapka1);
@@ -298,11 +300,11 @@ public class ElektroenergiaOputuvanna extends JFrame {
 		l_slider_putanna6_1.setBounds(8, 501, 143, 17);
 		getContentPane().add(l_slider_putanna6_1);
 
-		// l_fonVodaOputuvanna = new JLabel("");
-		// l_fonVodaOputuvanna.setBounds(0, 0, 794, 565);
-		// l_fonVodaOputuvanna.setIcon(new
-		// ImageIcon("res/fon_VodaOputuvanna.jpg"));
-		// getContentPane().add(l_fonVodaOputuvanna);
+		 l_fonVodaOputuvanna = new JLabel("");
+		 l_fonVodaOputuvanna.setBounds(0, 0, 794, 565);
+		 l_fonVodaOputuvanna.setIcon(new
+		 ImageIcon("res/fon_SvitloOputuvanna.jpg"));
+		 getContentPane().add(l_fonVodaOputuvanna);
 
 		slider_putanna2.addChangeListener(slider2);
 		slider_putanna3.addChangeListener(slider3);

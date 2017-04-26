@@ -53,7 +53,7 @@ public class ElektroenergiaRezultatu extends JFrame {
 		getContentPane().add(b_Menu);
 
 		l_Hapka = new JLabel("Вам необхідно:");
-		l_Hapka.setForeground(Color.YELLOW);
+		l_Hapka.setForeground(Color.GREEN);
 		l_Hapka.setHorizontalAlignment(SwingConstants.CENTER);
 		l_Hapka.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 28));
 		l_Hapka.setBounds(84, 9, 601, 35);
@@ -101,9 +101,9 @@ public class ElektroenergiaRezultatu extends JFrame {
 		if (k_Motuvacia == 0) {
 			scrollPane_Rekomendacia.setBounds(10, 53, 772, 114);
 
-			l_Pohvala = new JLabel("У Вас чудово світлоопримізоване житло !");
+			l_Pohvala = new JLabel("У Вас чудово світлооптимізоване житло !");
 			l_Pohvala.setHorizontalAlignment(SwingConstants.CENTER);
-			l_Pohvala.setForeground(Color.YELLOW);
+			l_Pohvala.setForeground(Color.BLUE);
 			l_Pohvala.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 28));
 			l_Pohvala.setBounds(84, 187, 601, 35);
 			getContentPane().add(l_Pohvala);
@@ -127,7 +127,7 @@ public class ElektroenergiaRezultatu extends JFrame {
 
 		l_fonVodaRecomendacii = new JLabel("");
 		l_fonVodaRecomendacii.setBounds(0, 0, 794, 565);
-		l_fonVodaRecomendacii.setIcon(new ImageIcon("res/fon_VodaRecomendacii.jpg"));
+		l_fonVodaRecomendacii.setIcon(new ImageIcon("res/fon_SvitloRecomendacii.jpg"));
 		getContentPane().add(l_fonVodaRecomendacii);
 
 		setVisible(true);
