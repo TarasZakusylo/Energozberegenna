@@ -234,19 +234,19 @@ public class ElektroenergiaOputuvanna extends JFrame {
 		b_Gotovo = new JButton("Готово");
 		b_Gotovo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 System.out.println("s_putanna1 " + i_putanna1);
-				 System.out.println("s_putanna2 " + i_slider_putanna2);
-				 System.out.println("i_slider_putanna3 " + i_slider_putanna3);
-				 System.out.println("i_slider_putanna4 " + i_slider_putanna4);
-				 System.out.println("i_slider_putanna5 " + i_slider_putanna5);
-				 System.out.println("s_putanna6 " + i_slider_putanna6);
+//				 System.out.println("s_putanna1 " + i_putanna1);
+//				 System.out.println("s_putanna2 " + i_slider_putanna2);
+//				 System.out.println("i_slider_putanna3 " + i_slider_putanna3);
+//				 System.out.println("i_slider_putanna4 " + i_slider_putanna4);
+//				 System.out.println("i_slider_putanna5 " + i_slider_putanna5);
+//				 System.out.println("s_putanna6 " + i_slider_putanna6);
 
 				if (i_putanna1 == 0) {
 					JOptionPane.showMessageDialog(null, "Помилка введення !");
 				} else {
-					// new VodaRezultatu("Водозбереження. Результат",
-					// i_putanna1, i_putanna2, i_slider_putanna3,
-					// i_slider_putanna4, i_slider_putanna5, i_putanna6);
+					 new ElektroenergiaRezultatu("Електроенергія. Оптимізація світла. Результат",
+					 i_putanna1, i_slider_putanna2, i_slider_putanna3,
+					 i_slider_putanna4, i_slider_putanna5, i_slider_putanna6);
 					setVisible(false);
 				}
 
