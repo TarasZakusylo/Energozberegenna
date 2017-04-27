@@ -128,7 +128,7 @@ public class TeploOputuvanna extends JFrame {
 				i_putanna1 = 2;
 			}
 		});
-		
+
 		l_putanna3 = new JLabel("Яке у Вас теплопостачання ?");
 		l_putanna3.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna3.setFont(new Font("Times New Roman", Font.BOLD, 20));
@@ -145,7 +145,7 @@ public class TeploOputuvanna extends JFrame {
 				i_putanna3 = 1;
 			}
 		});
-		
+
 		radioB_putanna3_2 = new JRadioButton("Автономне");
 		radioB_putanna3_2.setOpaque(false);
 		radioB_putanna3_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
@@ -201,11 +201,11 @@ public class TeploOputuvanna extends JFrame {
 		group_putanna1 = new ButtonGroup();
 		group_putanna1.add(radioB_putanna1_1);
 		group_putanna1.add(radioB_putanna1_2);
-		
+
 		group_putanna3 = new ButtonGroup();
 		group_putanna3.add(radioB_putanna3_1);
 		group_putanna3.add(radioB_putanna3_2);
-		
+
 		group_putanna5 = new ButtonGroup();
 		group_putanna5.add(radioB_putanna5_1);
 		group_putanna5.add(radioB_putanna5_2);
@@ -226,15 +226,21 @@ public class TeploOputuvanna extends JFrame {
 				System.out.println("i_slider_putanna4 " + i_slider_putanna4);
 				System.out.println("i_slider_putanna5 " + i_putanna5);
 				System.out.println("");
-
-				if (i_putanna1 == 0 || i_putanna3 == 0 || i_putanna5 == 0) {
-					JOptionPane.showMessageDialog(null, "Помилка введення !");
+ 
+				if (i_putanna2_1 >= 3 && s_putanna2_2.equals("До 20 м2")
+						|| i_putanna2_1 >= 3 && s_putanna2_2.equals("20 Х 30 м2")
+						|| i_putanna2_1 >= 3 && s_putanna2_2.equals("30 Х 40 м2")
+						|| i_putanna2_1 >= 3 && s_putanna2_2.equals("40 Х 50 м2")) {
+					JOptionPane.showMessageDialog(null, "Некоректне введення параметрі житла !");
 				} else {
-					new TeploOputuvanna1("Теплозбереження", i_putanna1, i_putanna2_1, s_putanna2_2, i_putanna3,
-							i_slider_putanna4, i_putanna5);
-					setVisible(false);
+					if (i_putanna1 == 0 || i_putanna3 == 0 || i_putanna5 == 0) {
+						JOptionPane.showMessageDialog(null, "Помилка введення !");
+					} else {
+						new TeploOputuvanna1("Теплозбереження", i_putanna1, i_putanna2_1, s_putanna2_2, i_putanna3,
+								i_slider_putanna4, i_putanna5);
+						setVisible(false);
+					}
 				}
-
 			}
 		});
 		b_Gotovo.setBounds(528, 524, 266, 41);
