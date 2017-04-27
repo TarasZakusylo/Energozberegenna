@@ -61,7 +61,7 @@ public class TeploRezultatu extends JFrame {
 		getContentPane().add(b_Menu);
 
 		l_Hapka = new JLabel("Вам необхідно:");
-		l_Hapka.setForeground(Color.GREEN);
+		l_Hapka.setForeground(Color.BLUE);
 		l_Hapka.setHorizontalAlignment(SwingConstants.CENTER);
 		l_Hapka.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 28));
 		l_Hapka.setBounds(84, 9, 601, 35);
@@ -374,7 +374,7 @@ public class TeploRezultatu extends JFrame {
 
 		l_fonVodaRecomendacii = new JLabel("");
 		l_fonVodaRecomendacii.setBounds(0, 0, 794, 565);
-		l_fonVodaRecomendacii.setIcon(new ImageIcon("res/fon_SvitloRecomendacii.jpg"));
+		l_fonVodaRecomendacii.setIcon(new ImageIcon("res/fon_TeploRecomendacii.jpg"));
 		getContentPane().add(l_fonVodaRecomendacii);
 
 		setVisible(true);

@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -77,37 +78,42 @@ public class TeploOputuvanna extends JFrame {
 		getContentPane().add(b_Nazad);
 
 		l_Hapka = new JLabel("Пройдіть, будь ласка, опитування");
-		l_Hapka.setForeground(Color.ORANGE);
+		l_Hapka.setForeground(Color.BLUE);
 		l_Hapka.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 25));
 		l_Hapka.setHorizontalAlignment(SwingConstants.CENTER);
 		l_Hapka.setBounds(90, 4, 595, 30);
 		getContentPane().add(l_Hapka);
 
 		l_putanna1 = new JLabel("Де Ви мешкаєте ?");
+		l_putanna1.setForeground(Color.BLACK);
 		l_putanna1.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna1.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		l_putanna1.setBounds(28, 47, 727, 30);
 		getContentPane().add(l_putanna1);
 
 		l_putanna2 = new JLabel("Вкажіть кількість кімнат та приблизну площу :");
+		l_putanna2.setForeground(Color.BLACK);
 		l_putanna2.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna2.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		l_putanna2.setBounds(28, 136, 727, 30);
 		getContentPane().add(l_putanna2);
 
 		l_putanna4 = new JLabel("Чи є у Вас вентелі, регулятори на батареях ?");
+		l_putanna4.setForeground(Color.BLACK);
 		l_putanna4.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna4.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		l_putanna4.setBounds(28, 324, 727, 30);
 		getContentPane().add(l_putanna4);
 
 		l_putanna5 = new JLabel("Чи є у Вас система \"тепла підлога\"  ?");
+		l_putanna5.setForeground(Color.BLACK);
 		l_putanna5.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna5.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		l_putanna5.setBounds(28, 436, 727, 30);
 		getContentPane().add(l_putanna5);
 
 		radioB_putanna1_1 = new JRadioButton("Квартира");
+		radioB_putanna1_1.setForeground(Color.BLACK);
 		radioB_putanna1_1.setOpaque(false);
 		radioB_putanna1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -119,6 +125,7 @@ public class TeploOputuvanna extends JFrame {
 		getContentPane().add(radioB_putanna1_1);
 
 		radioB_putanna1_2 = new JRadioButton("Будинок");
+		radioB_putanna1_2.setForeground(Color.BLACK);
 		radioB_putanna1_2.setOpaque(false);
 		radioB_putanna1_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna1_2.setBounds(506, 86, 249, 25);
@@ -130,12 +137,14 @@ public class TeploOputuvanna extends JFrame {
 		});
 
 		l_putanna3 = new JLabel("Яке у Вас теплопостачання ?");
+		l_putanna3.setForeground(Color.BLACK);
 		l_putanna3.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna3.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		l_putanna3.setBounds(28, 238, 727, 30);
 		getContentPane().add(l_putanna3);
 
 		radioB_putanna3_1 = new JRadioButton("Центральне");
+		radioB_putanna3_1.setForeground(Color.BLACK);
 		radioB_putanna3_1.setOpaque(false);
 		radioB_putanna3_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna3_1.setBounds(90, 277, 322, 25);
@@ -147,6 +156,7 @@ public class TeploOputuvanna extends JFrame {
 		});
 
 		radioB_putanna3_2 = new JRadioButton("Автономне");
+		radioB_putanna3_2.setForeground(Color.BLACK);
 		radioB_putanna3_2.setOpaque(false);
 		radioB_putanna3_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		radioB_putanna3_2.setBounds(506, 277, 249, 25);
@@ -219,14 +229,14 @@ public class TeploOputuvanna extends JFrame {
 
 				int i_putanna2_1 = Integer.parseInt(s_putanna2_1);
 
-				System.out.println("s_putanna1 " + i_putanna1);
-				System.out.println("s_putanna2_1 " + i_putanna2_1);
-				System.out.println("s_putanna2_2 " + s_putanna2_2);
-				System.out.println("i_putanna3 " + i_putanna3);
-				System.out.println("i_slider_putanna4 " + i_slider_putanna4);
-				System.out.println("i_slider_putanna5 " + i_putanna5);
-				System.out.println("");
- 
+				// System.out.println("s_putanna1 " + i_putanna1);
+				// System.out.println("s_putanna2_1 " + i_putanna2_1);
+				// System.out.println("s_putanna2_2 " + s_putanna2_2);
+				// System.out.println("i_putanna3 " + i_putanna3);
+				// System.out.println("i_slider_putanna4 " + i_slider_putanna4);
+				// System.out.println("i_slider_putanna5 " + i_putanna5);
+				// System.out.println("");
+
 				if (i_putanna2_1 >= 3 && s_putanna2_2.equals("До 20 м2")
 						|| i_putanna2_1 >= 3 && s_putanna2_2.equals("20 Х 30 м2")
 						|| i_putanna2_1 >= 3 && s_putanna2_2.equals("30 Х 40 м2")
@@ -246,12 +256,6 @@ public class TeploOputuvanna extends JFrame {
 		b_Gotovo.setBounds(528, 524, 266, 41);
 		getContentPane().add(b_Gotovo);
 
-		// l_fonVodaOputuvanna = new JLabel("");
-		// l_fonVodaOputuvanna.setBounds(0, 0, 794, 565);
-		// l_fonVodaOputuvanna.setIcon(new
-		// ImageIcon("res/fon_VodaOputuvanna.jpg"));
-		// getContentPane().add(l_fonVodaOputuvanna);
-
 		choice_putanna1_1 = new Choice();
 		choice_putanna1_1.setBounds(222, 194, 94, 22);
 		getContentPane().add(choice_putanna1_1);
@@ -267,15 +271,22 @@ public class TeploOputuvanna extends JFrame {
 		l_choice1_1.setBounds(101, 193, 115, 16);
 		getContentPane().add(l_choice1_1);
 
-		l_choice1_2 = new JLabel("Раз на тиждень :");
+		l_choice1_2 = new JLabel("Площа :");
+		l_choice1_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		l_choice1_2.setForeground(Color.BLACK);
 		l_choice1_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
-		l_choice1_2.setBounds(425, 194, 160, 16);
+		l_choice1_2.setBounds(409, 194, 160, 16);
 		getContentPane().add(l_choice1_2);
 
 		choice_putanna1_2 = new Choice();
 		choice_putanna1_2.setBounds(591, 194, 105, 22);
 		getContentPane().add(choice_putanna1_2);
+		
+				l_fonVodaOputuvanna = new JLabel("");
+				l_fonVodaOputuvanna.setForeground(Color.YELLOW);
+				l_fonVodaOputuvanna.setBounds(0, 0, 794, 565);
+				l_fonVodaOputuvanna.setIcon(new ImageIcon("res/fon_TeploOputuvanna.jpg"));
+				getContentPane().add(l_fonVodaOputuvanna);
 		choice_putanna1_2.add("До 20 м2");
 		choice_putanna1_2.add("20 Х 30 м2");
 		choice_putanna1_2.add("30 Х 40 м2");

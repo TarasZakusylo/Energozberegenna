@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
@@ -113,7 +114,7 @@ public class TeploOputuvanna1 extends JFrame {
 		getContentPane().add(b_Menu);
 
 		l_Hapka = new JLabel("Пройдіть, будь ласка, опитування");
-		l_Hapka.setForeground(Color.ORANGE);
+		l_Hapka.setForeground(Color.BLUE);
 		l_Hapka.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 25));
 		l_Hapka.setHorizontalAlignment(SwingConstants.CENTER);
 		l_Hapka.setBounds(90, 4, 595, 30);
@@ -245,23 +246,24 @@ public class TeploOputuvanna1 extends JFrame {
 		b_Gotovo = new JButton("Готово");
 		b_Gotovo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
- 
 
 				// int i_putanna1, int i_putanna2_1, String s_putanna2_2, int
 				// i_putanna3,int i_slider_putanna4, int i_putanna5
 
-				System.out.println("i_putanna_grup1 " + i_putanna_grup1);
-				System.out.println("JCheckBox ");
-				if (i_putanna3 == 1) {
-					System.out.println("i_putanna_grup3 " + i_putanna_grup3);
-					System.out.println("i_putanna_grup4 " + i_putanna_grup4);
-				} else {
-					System.out.println("i_slider_putanna3Var2 " + i_slider_putanna3Var2);
-					System.out.println("i_putanna_grup4Var2 " + i_putanna_grup4Var2);
-				}
-
-				System.out.println("");
-				System.out.println("");
+				// System.out.println("i_putanna_grup1 " + i_putanna_grup1);
+				// System.out.println("JCheckBox ");
+				// if (i_putanna3 == 1) {
+				// System.out.println("i_putanna_grup3 " + i_putanna_grup3);
+				// System.out.println("i_putanna_grup4 " + i_putanna_grup4);
+				// } else {
+				// System.out.println("i_slider_putanna3Var2 " +
+				// i_slider_putanna3Var2);
+				// System.out.println("i_putanna_grup4Var2 " +
+				// i_putanna_grup4Var2);
+				// }
+				//
+				// System.out.println("");
+				// System.out.println("");
 
 				if (i_putanna3 == 1) {
 					if (i_putanna_grup1 == 0 || i_putanna_grup4 == 0 || i_putanna_grup3 == 0) {
@@ -319,11 +321,12 @@ public class TeploOputuvanna1 extends JFrame {
 							i_checkBox_putanna2Var2_6 = 1;
 						}
 
-						 new TeploRezultatu("Теплозбереження. Результати", i_putanna1, i_putanna2_1, s_putanna2_2,
-									i_slider_putanna4, i_putanna5, i_putanna_grup1, i_checkBox_putanna2Var2_1,
-									i_checkBox_putanna2Var2_2, i_checkBox_putanna2Var2_3,i_checkBox_putanna2Var2_4,
-									i_checkBox_putanna2Var2_5, i_checkBox_putanna2Var2_6, i_slider_putanna3Var2, i_putanna_grup4Var2);
-						 setVisible(false);
+						new TeploRezultatu("Теплозбереження. Результати", i_putanna1, i_putanna2_1, s_putanna2_2,
+								i_slider_putanna4, i_putanna5, i_putanna_grup1, i_checkBox_putanna2Var2_1,
+								i_checkBox_putanna2Var2_2, i_checkBox_putanna2Var2_3, i_checkBox_putanna2Var2_4,
+								i_checkBox_putanna2Var2_5, i_checkBox_putanna2Var2_6, i_slider_putanna3Var2,
+								i_putanna_grup4Var2);
+						setVisible(false);
 					}
 				}
 			}
@@ -362,16 +365,19 @@ public class TeploOputuvanna1 extends JFrame {
 			});
 
 			checkBox_putanna2_1 = new JCheckBox("Утеплення стін");
+			checkBox_putanna2_1.setOpaque(false);
 			checkBox_putanna2_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 			checkBox_putanna2_1.setBounds(232, 208, 383, 25);
 			getContentPane().add(checkBox_putanna2_1);
 
 			checkBox_putanna2_2 = new JCheckBox("Сучасні, надійні, щільні двері");
+			checkBox_putanna2_2.setOpaque(false);
 			checkBox_putanna2_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 			checkBox_putanna2_2.setBounds(232, 293, 275, 25);
 			getContentPane().add(checkBox_putanna2_2);
 
 			checkBox_putanna2_3 = new JCheckBox("Вікна із 2-3 шарами");
+			checkBox_putanna2_3.setOpaque(false);
 			checkBox_putanna2_3.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 			checkBox_putanna2_3.setBounds(232, 249, 185, 25);
 			getContentPane().add(checkBox_putanna2_3);
@@ -462,31 +468,37 @@ public class TeploOputuvanna1 extends JFrame {
 			});
 
 			checkBox_putanna2Var2_1 = new JCheckBox("Утеплення стін із західної, північної сторони");
+			checkBox_putanna2Var2_1.setOpaque(false);
 			checkBox_putanna2Var2_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 			checkBox_putanna2Var2_1.setBounds(38, 192, 389, 25);
 			getContentPane().add(checkBox_putanna2Var2_1);
 
 			checkBox_putanna2Var2_2 = new JCheckBox("Утеплення стін із східної, південної сторони");
+			checkBox_putanna2Var2_2.setOpaque(false);
 			checkBox_putanna2Var2_2.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 			checkBox_putanna2Var2_2.setBounds(38, 234, 389, 25);
 			getContentPane().add(checkBox_putanna2Var2_2);
 
 			checkBox_putanna2Var2_3 = new JCheckBox("Сучасні, надійні, щільні двері");
+			checkBox_putanna2Var2_3.setOpaque(false);
 			checkBox_putanna2Var2_3.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 			checkBox_putanna2Var2_3.setBounds(38, 279, 275, 25);
 			getContentPane().add(checkBox_putanna2Var2_3);
 
 			checkBox_putanna2Var2_4 = new JCheckBox("Вікна із 2-3 шарами");
+			checkBox_putanna2Var2_4.setOpaque(false);
 			checkBox_putanna2Var2_4.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 			checkBox_putanna2Var2_4.setBounds(466, 192, 185, 25);
 			getContentPane().add(checkBox_putanna2Var2_4);
 
 			checkBox_putanna2Var2_5 = new JCheckBox("Утеплена підлога");
+			checkBox_putanna2Var2_5.setOpaque(false);
 			checkBox_putanna2Var2_5.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 			checkBox_putanna2Var2_5.setBounds(466, 235, 185, 25);
 			getContentPane().add(checkBox_putanna2Var2_5);
 
 			checkBox_putanna2Var2_6 = new JCheckBox("Утеплена стеля");
+			checkBox_putanna2Var2_6.setOpaque(false);
 			checkBox_putanna2Var2_6.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 			checkBox_putanna2Var2_6.setBounds(466, 280, 185, 25);
 			getContentPane().add(checkBox_putanna2Var2_6);
@@ -512,6 +524,11 @@ public class TeploOputuvanna1 extends JFrame {
 		group_putanna4Var2 = new ButtonGroup();
 		group_putanna4Var2.add(radioB_putanna4Var2_1);
 		group_putanna4Var2.add(radioB_putanna4Var2_2);
+
+		l_fonVodaOputuvanna = new JLabel("");
+		l_fonVodaOputuvanna.setBounds(0, 0, 794, 565);
+		l_fonVodaOputuvanna.setIcon(new ImageIcon("res/fon_TeploOputuvanna.jpg"));
+		getContentPane().add(l_fonVodaOputuvanna);
 
 		setVisible(true);
 	}
