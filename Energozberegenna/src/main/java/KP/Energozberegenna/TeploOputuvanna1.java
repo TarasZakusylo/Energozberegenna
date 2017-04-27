@@ -4,9 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
 
-import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -247,12 +245,7 @@ public class TeploOputuvanna1 extends JFrame {
 		b_Gotovo = new JButton("Готово");
 		b_Gotovo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				if (checkBox_putanna2_1.isSelected() == true) {
-
-				} else {
-
-				}
+ 
 
 				// int i_putanna1, int i_putanna2_1, String s_putanna2_2, int
 				// i_putanna3,int i_slider_putanna4, int i_putanna5
@@ -288,20 +281,49 @@ public class TeploOputuvanna1 extends JFrame {
 						if (checkBox_putanna2_3.isSelected() == false) {
 							i_checkBox_putanna2_3 = 1;
 						}
-												
+
 						new TeploRezultatu("Теплозбереження. Результати", i_putanna1, i_putanna2_1, s_putanna2_2,
 								i_slider_putanna4, i_putanna5, i_putanna_grup1, i_checkBox_putanna2_1,
 								i_checkBox_putanna2_2, i_checkBox_putanna2_3, i_putanna_grup3, i_putanna_grup4);
 						setVisible(false);
+
 					}
 				} else {
 					if (i_putanna_grup1 == 0 || i_slider_putanna3Var2 == 0) {
 						JOptionPane.showMessageDialog(null, "Помилка введення !");
 					} else {
-						// new TeploRezultatu("Теплозбереження. Результати",
-						// i_putanna1, i_putanna2_1, s_putanna2_2,
-						// i_putanna3, i_slider_putanna4, i_putanna5);
-						// setVisible(false);
+
+						int i_checkBox_putanna2Var2_1 = 0;
+						int i_checkBox_putanna2Var2_2 = 0;
+						int i_checkBox_putanna2Var2_3 = 0;
+						int i_checkBox_putanna2Var2_4 = 0;
+						int i_checkBox_putanna2Var2_5 = 0;
+						int i_checkBox_putanna2Var2_6 = 0;
+
+						if (checkBox_putanna2Var2_1.isSelected() == false) {
+							i_checkBox_putanna2Var2_1 = 1;
+						}
+						if (checkBox_putanna2Var2_2.isSelected() == false) {
+							i_checkBox_putanna2Var2_2 = 1;
+						}
+						if (checkBox_putanna2Var2_3.isSelected() == false) {
+							i_checkBox_putanna2Var2_3 = 1;
+						}
+						if (checkBox_putanna2Var2_4.isSelected() == false) {
+							i_checkBox_putanna2Var2_4 = 1;
+						}
+						if (checkBox_putanna2Var2_5.isSelected() == false) {
+							i_checkBox_putanna2Var2_5 = 1;
+						}
+						if (checkBox_putanna2Var2_6.isSelected() == false) {
+							i_checkBox_putanna2Var2_6 = 1;
+						}
+
+						 new TeploRezultatu("Теплозбереження. Результати", i_putanna1, i_putanna2_1, s_putanna2_2,
+									i_slider_putanna4, i_putanna5, i_putanna_grup1, i_checkBox_putanna2Var2_1,
+									i_checkBox_putanna2Var2_2, i_checkBox_putanna2Var2_3,i_checkBox_putanna2Var2_4,
+									i_checkBox_putanna2Var2_5, i_checkBox_putanna2Var2_6, i_slider_putanna3Var2, i_putanna_grup4Var2);
+						 setVisible(false);
 					}
 				}
 			}
