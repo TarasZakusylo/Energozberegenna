@@ -23,7 +23,7 @@ public class PidtrumkaTepla extends JFrame {
 	private JLabel l_Hapka;
 	private JButton b_Menu;
 
-	private JLabel l_fon;
+	private JLabel l_fonPidtrumkaTepla;
 
 	String s_Recomendacii1 = "";
 	String s_Recomendacii2 = "";
@@ -59,7 +59,7 @@ public class PidtrumkaTepla extends JFrame {
 		getContentPane().add(b_Menu);
 
 		l_Hapka = new JLabel("Підтримка");
-		l_Hapka.setForeground(Color.ORANGE);
+		l_Hapka.setForeground(Color.RED);
 		l_Hapka.setHorizontalAlignment(SwingConstants.CENTER);
 		l_Hapka.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 35));
 		l_Hapka.setBounds(84, 9, 601, 35);
@@ -116,6 +116,7 @@ public class PidtrumkaTepla extends JFrame {
 		getContentPane().add(textPane_PruvatBank);
 
 		JLabel l_DetalniheOscadBank = new JLabel("Детальніше...");
+		l_DetalniheOscadBank.setForeground(Color.BLUE);
 		l_DetalniheOscadBank.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -135,6 +136,7 @@ public class PidtrumkaTepla extends JFrame {
 		getContentPane().add(l_DetalniheOscadBank);
 
 		JLabel l_DetalniheUkrgasBank = new JLabel("Детальніше...");
+		l_DetalniheUkrgasBank.setForeground(Color.BLUE);
 		l_DetalniheUkrgasBank.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -154,6 +156,7 @@ public class PidtrumkaTepla extends JFrame {
 		getContentPane().add(l_DetalniheUkrgasBank);
 
 		JLabel l_DetalnihePruvatBank = new JLabel("Детальніше...");
+		l_DetalnihePruvatBank.setForeground(Color.BLUE);
 		l_DetalnihePruvatBank.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -173,10 +176,10 @@ public class PidtrumkaTepla extends JFrame {
 		l_DetalnihePruvatBank.setBounds(671, 540, 111, 25);
 		getContentPane().add(l_DetalnihePruvatBank);
 
-		// l_fon = new JLabel("");
-		// l_fon.setBounds(0, 0, 794, 565);
-		// l_fon.setIcon(new ImageIcon("res/fon_Pomulku.jpg"));
-		// getContentPane().add(l_fon);
+		 l_fonPidtrumkaTepla = new JLabel("");
+		 l_fonPidtrumkaTepla.setBounds(0, 0, 794, 565);
+		 l_fonPidtrumkaTepla.setIcon(new ImageIcon("res/fon_PidtrumkaTepla.jpg"));
+		 getContentPane().add(l_fonPidtrumkaTepla);
 
 		setVisible(true);
 	}
