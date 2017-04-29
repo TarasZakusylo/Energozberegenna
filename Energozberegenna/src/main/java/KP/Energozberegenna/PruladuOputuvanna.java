@@ -1,11 +1,13 @@
 package KP.Energozberegenna;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,10 +28,10 @@ public class PruladuOputuvanna extends JFrame {
 	private JRadioButton radioB_PralniMahun;
 	private JTextPane textPane_Zagalno;
 	private JLabel l_Detalnihe;
-
 	private JRadioButton radioB_Zagalno;
-
 	private ButtonGroup group_pruladu;
+	private JLabel l_fonVodaRecomendacii;
+	private JLabel l_Kartunka;
 
 	public PruladuOputuvanna(String s) {
 		super(s);
@@ -51,20 +53,24 @@ public class PruladuOputuvanna extends JFrame {
 		getContentPane().add(b_Nazad);
 
 		l_HapkaZagalno = new JLabel("Загально про прилади :");
-		l_HapkaZagalno.setForeground(Color.ORANGE);
+		l_HapkaZagalno.setForeground(Color.GREEN);
 		l_HapkaZagalno.setFont(new Font("Palatino Linotype", Font.BOLD | Font.ITALIC, 25));
 		l_HapkaZagalno.setHorizontalAlignment(SwingConstants.CENTER);
 		l_HapkaZagalno.setBounds(90, 4, 595, 30);
 		getContentPane().add(l_HapkaZagalno);
 
 		l_Detalnihe = new JLabel("Детальніше про :");
+		l_Detalnihe.setForeground(Color.YELLOW);
 		l_Detalnihe.setHorizontalAlignment(SwingConstants.CENTER);
-		l_Detalnihe.setFont(new Font("Times New Roman", Font.ITALIC, 18));
-		l_Detalnihe.setBounds(603, 51, 179, 25);
+		l_Detalnihe.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		l_Detalnihe.setBounds(589, 51, 193, 25);
 		getContentPane().add(l_Detalnihe);
 
 		radioB_Holodulnuku = new JRadioButton("Холодильники");
-		radioB_Holodulnuku.setBounds(603, 93, 159, 25);
+		radioB_Holodulnuku.setFont(new Font("Times New Roman", Font.ITALIC, 17));
+		radioB_Holodulnuku.setForeground(Color.YELLOW);
+		radioB_Holodulnuku.setOpaque(false);
+		radioB_Holodulnuku.setBounds(589, 93, 193, 25);
 		getContentPane().add(radioB_Holodulnuku);
 		radioB_Holodulnuku.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -74,12 +80,15 @@ public class PruladuOputuvanna extends JFrame {
 								+ "3.   Оптимальна температура в холодильнику – від нуля до п’яти градусів тепла. Регулюйте її відповідно до температури на кухні та кількості продуктів.\r\n"
 								+ "4.   Менше відкривайте, проаналізуйте, що може зберігатися поза межами холодильника без втрати якості.\r\n"
 								+ "5.   Холодильник бажано ставити в саме прохолодне місце кухні або кімнати і бажано біля зовнішньої стіни.");
-				radioB_Zagalno.setBounds(603, 319, 159, 25);
+				radioB_Zagalno.setBounds(589, 319, 193, 25);
 			}
 		});
 
 		radioB_Konducioneru = new JRadioButton("Кондиціонери");
-		radioB_Konducioneru.setBounds(603, 135, 159, 25);
+		radioB_Konducioneru.setFont(new Font("Times New Roman", Font.ITALIC, 17));
+		radioB_Konducioneru.setForeground(Color.YELLOW);
+		radioB_Konducioneru.setOpaque(false);
+		radioB_Konducioneru.setBounds(589, 135, 193, 25);
 		getContentPane().add(radioB_Konducioneru);
 		radioB_Konducioneru.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -89,12 +98,15 @@ public class PruladuOputuvanna extends JFrame {
 								+ "3.   Вчасно чистить фільтр;\r\n"
 								+ "4.   Використовуйте режим автоматично підтримання температури (оптимальне енергоспоживання досягається при температурі приміщення 20-22 °C);\r\n"
 								+ "5.   Вимикайте, коли не користуєтесь приміщенням.");
-				radioB_Zagalno.setBounds(603, 319, 159, 25);
+				radioB_Zagalno.setBounds(589, 319, 193, 25);
 			}
 		});
 
 		radioB_Plutu = new JRadioButton("Плити");
-		radioB_Plutu.setBounds(603, 182, 159, 25);
+		radioB_Plutu.setFont(new Font("Times New Roman", Font.ITALIC, 17));
+		radioB_Plutu.setForeground(Color.YELLOW);
+		radioB_Plutu.setOpaque(false);
+		radioB_Plutu.setBounds(589, 182, 193, 25);
 		getContentPane().add(radioB_Plutu);
 		radioB_Plutu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -105,12 +117,15 @@ public class PruladuOputuvanna extends JFrame {
 								+ "4.   Грійте в чайнику тільки необхідну на даний час кількість води.\r\n"
 								+ "5.   Вимикайте конфорку за декілька хвилин до готовності їжі.\r\n"
 								+ "6.   Використовуйте НВЧ-печі, МХ-печі та індукційні плити – вони працюють швидко та економічно.");
-				radioB_Zagalno.setBounds(603, 319, 159, 25);
+				radioB_Zagalno.setBounds(589, 319, 193, 25);
 			}
 		});
 
 		radioB_PralniMahun = new JRadioButton("Пральні машини");
-		radioB_PralniMahun.setBounds(603, 228, 159, 25);
+		radioB_PralniMahun.setFont(new Font("Times New Roman", Font.ITALIC, 17));
+		radioB_PralniMahun.setForeground(Color.YELLOW);
+		radioB_PralniMahun.setOpaque(false);
+		radioB_PralniMahun.setBounds(589, 228, 193, 25);
 		getContentPane().add(radioB_PralniMahun);
 		radioB_PralniMahun.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -118,12 +133,15 @@ public class PruladuOputuvanna extends JFrame {
 						"1.   Практика показує, що все ж дуже бажано не перевищувати норми максимального завантаження білизни, також слід уникати і надто малого завантаження пральної машини. Не раціональна витрата електроенергії в цих випадках може становити від 10 до 15%.\r\n"
 								+ "2.   Сортуйте білизну перед пранням, т.к. в разі середньої або слабкої ступені забруднення бажано відмовлятися від режиму попереднього прання.\r\n"
 								+ "3.   Уважно ставтеся до вибору програм, при неправильній програмі прання перевитрата електроенергії може скласти - до 30%. Враховуючи, що пральна машина досить добре споживає електроенергію та прання (залежно від обраної програми) може тривати не одну годину, а прати треба кілька разів на тиждень (а в деяких випадках і кожен день), її раціональне використання неухильно відіб'ється на вашому добробуті.");
-				radioB_Zagalno.setBounds(603, 319, 159, 25);
+				radioB_Zagalno.setBounds(589, 319, 193, 25);
 			}
 		});
 
 		radioB_KompTel = new JRadioButton("Коп'ютери, телефони");
-		radioB_KompTel.setBounds(603, 273, 159, 25);
+		radioB_KompTel.setFont(new Font("Times New Roman", Font.ITALIC, 17));
+		radioB_KompTel.setForeground(Color.YELLOW);
+		radioB_KompTel.setOpaque(false);
+		radioB_KompTel.setBounds(589, 273, 193, 25);
 		getContentPane().add(radioB_KompTel);
 		radioB_KompTel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -132,11 +150,14 @@ public class PruladuOputuvanna extends JFrame {
 								+ "2.   Не залишайте ваше обладнання в режимі очікування! Це не тільки небезпечно, але і згадайте знамените гасло: \"йдучи - гасіть світло\", це стосується і вашої решти приладів.\r\n"
 								+ "3.   Не можна залишати прилади, що працюють від акумулятора (наприклад, мобільні телефони), увімкненими довше, ніж потрібно для повної зарядки акумулятора.\r\n"
 								+ "4.   Після виходу на роботу постарайтеся вимкнути цю техніку з розетки. Завдяки цьому процесу ви зможете значно продовжити термін служби своєї техніки, а також значно заощадити електроенергію.");
-				radioB_Zagalno.setBounds(603, 319, 159, 25);
+				radioB_Zagalno.setBounds(589, 319, 193, 25);
 			}
 		});
 
 		radioB_Zagalno = new JRadioButton("Загально");
+		radioB_Zagalno.setFont(new Font("Times New Roman", Font.ITALIC, 17));
+		radioB_Zagalno.setForeground(Color.YELLOW);
+		radioB_Zagalno.setOpaque(false);
 		radioB_Zagalno.setBounds(0, 0, 0, 0);
 		getContentPane().add(radioB_Zagalno);
 		radioB_Zagalno.addActionListener(new ActionListener() {
@@ -174,6 +195,18 @@ public class PruladuOputuvanna extends JFrame {
 		group_pruladu.add(radioB_KompTel);
 		group_pruladu.add(radioB_Zagalno);
 
+		l_Kartunka = new JLabel("");
+		l_Kartunka.setBounds(578, 344, 216, 221);
+		l_Kartunka.setIcon(new ImageIcon("res/KartunkaDlaPruladiv.png"));
+		getContentPane().add(l_Kartunka);
+		
+		l_fonVodaRecomendacii = new JLabel("");
+		l_fonVodaRecomendacii.setBounds(0, 0, 794, 565);
+		l_fonVodaRecomendacii.setIcon(new ImageIcon("res/fon_PruladuRecomendacii.jpg"));
+		getContentPane().add(l_fonVodaRecomendacii);
+		
+
+		
 		setVisible(true);
 	}
 }
