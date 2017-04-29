@@ -86,7 +86,7 @@ public class Menu extends JFrame {
 		b_Pomulku = new JButton("Помилки");
 		b_Pomulku.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new PomulkuOputuvanna("Помилки");
+				new Pomulku("Помилки");
 				setVisible(false);
 			}
 		});

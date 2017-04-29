@@ -1,7 +1,6 @@
 package KP.Energozberegenna;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -199,14 +198,12 @@ public class PruladuOputuvanna extends JFrame {
 		l_Kartunka.setBounds(578, 344, 216, 221);
 		l_Kartunka.setIcon(new ImageIcon("res/KartunkaDlaPruladiv.png"));
 		getContentPane().add(l_Kartunka);
-		
+
 		l_fonVodaRecomendacii = new JLabel("");
 		l_fonVodaRecomendacii.setBounds(0, 0, 794, 565);
 		l_fonVodaRecomendacii.setIcon(new ImageIcon("res/fon_PruladuRecomendacii.jpg"));
 		getContentPane().add(l_fonVodaRecomendacii);
-		
 
-		
 		setVisible(true);
 	}
 }

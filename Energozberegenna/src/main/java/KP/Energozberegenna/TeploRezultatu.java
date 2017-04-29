@@ -50,7 +50,7 @@ public class TeploRezultatu extends JFrame {
 		setLocationRelativeTo(null);
 
 		b_Menu = new JButton("Меню");
-		b_Menu.setBounds(697, 0, 97, 25);
+		b_Menu.setBounds(661, 0, 133, 34);
 		b_Menu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Menu("Енергозбереження дому");
@@ -217,7 +217,7 @@ public class TeploRezultatu extends JFrame {
 		setLocationRelativeTo(null);
 
 		b_Menu = new JButton("Меню");
-		b_Menu.setBounds(697, 0, 97, 25);
+		b_Menu.setBounds(661, 0, 133, 34);
 		b_Menu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Menu("Енергозбереження дому");
