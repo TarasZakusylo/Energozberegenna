@@ -38,7 +38,12 @@ public class TeploRezultatu extends JFrame {
 
 	private JLabel l_Pohvala;
 	private JLabel l_fotoPohvala;
+	private JButton b_AlternatuvneOpalenna;
+	private JButton b_Pidtrumka;
 
+	/**
+	 * @wbp.parser.constructor
+	 */
 	public TeploRezultatu(String s, int i_putanna1, int i_putanna2_1, String s_putanna2_2, int i_slider_putanna4,
 			int i_putanna5, int i_putanna_grup1, int i_checkBox_putanna2_1, int i_checkBox_putanna2_2,
 			int i_checkBox_putanna2_3, int i_putanna_grup3, int i_putanna_grup4) {
@@ -187,7 +192,7 @@ public class TeploRezultatu extends JFrame {
 			getContentPane().add(l_fotoPohvala);
 
 		} else {
-			scrollPane_Rekomendacia.setBounds(10, 53, 772, 499);
+			scrollPane_Rekomendacia.setBounds(10, 53, 772, 480);
 		}
 
 		textPane_Rekomendacia = new JTextPane();
@@ -196,10 +201,30 @@ public class TeploRezultatu extends JFrame {
 		textPane_Rekomendacia.setFont(new Font("Times New Roman", Font.PLAIN, 17));
 		scrollPane_Rekomendacia.setViewportView(textPane_Rekomendacia);
 		textPane_Rekomendacia.setText(s_Recomendacia);
+		
+		b_Pidtrumka = new JButton("Підтримка");
+		b_Pidtrumka.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new PidtrumkaTepla("Підтримка",1);
+				setVisible(false);
+			}
+		});
+		b_Pidtrumka.setBounds(0, 531, 398, 34);
+		getContentPane().add(b_Pidtrumka);
+		
+		b_AlternatuvneOpalenna = new JButton("Альтернативне опалення");
+		b_AlternatuvneOpalenna.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new AlternatuvaTepla("Альтернативне опалення");
+				setVisible(false);
+			}
+		});
+		b_AlternatuvneOpalenna.setBounds(396, 531, 398, 34);
+		getContentPane().add(b_AlternatuvneOpalenna);
 
 		l_fonVodaRecomendacii = new JLabel("");
 		l_fonVodaRecomendacii.setBounds(0, 0, 794, 565);
-		l_fonVodaRecomendacii.setIcon(new ImageIcon("res/fon_SvitloRecomendacii.jpg"));
+		l_fonVodaRecomendacii.setIcon(new ImageIcon("res/fon_TeploRecomendacii.jpg"));
 		getContentPane().add(l_fonVodaRecomendacii);
 
 		setVisible(true);
@@ -362,7 +387,7 @@ public class TeploRezultatu extends JFrame {
 			getContentPane().add(l_fotoPohvala);
 
 		} else {
-			scrollPane_Rekomendacia.setBounds(10, 53, 772, 499);
+			scrollPane_Rekomendacia.setBounds(10, 53, 772, 480);
 		}
 
 		textPane_Rekomendacia = new JTextPane();
@@ -371,6 +396,26 @@ public class TeploRezultatu extends JFrame {
 		textPane_Rekomendacia.setFont(new Font("Times New Roman", Font.PLAIN, 17));
 		scrollPane_Rekomendacia.setViewportView(textPane_Rekomendacia);
 		textPane_Rekomendacia.setText(s_Recomendacia);
+		
+		b_Pidtrumka = new JButton("Підтримка");
+		b_Pidtrumka.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new PidtrumkaTepla("Підтримка",2);
+				setVisible(false);
+			}
+		});
+		b_Pidtrumka.setBounds(0, 531, 398, 34);
+		getContentPane().add(b_Pidtrumka);
+		
+		b_AlternatuvneOpalenna = new JButton("Альтернативне опалення");
+		b_AlternatuvneOpalenna.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new AlternatuvaTepla("Альтернативне опалення");
+				setVisible(false);
+			}
+		});
+		b_AlternatuvneOpalenna.setBounds(396, 531, 398, 34);
+		getContentPane().add(b_AlternatuvneOpalenna);
 
 		l_fonVodaRecomendacii = new JLabel("");
 		l_fonVodaRecomendacii.setBounds(0, 0, 794, 565);
@@ -418,5 +463,4 @@ public class TeploRezultatu extends JFrame {
 		k_PunktivRekomendaciy++;
 		k_Motuvacia++;
 	}
-
 }
