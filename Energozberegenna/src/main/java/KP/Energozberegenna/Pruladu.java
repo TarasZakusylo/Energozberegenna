@@ -69,7 +69,7 @@ public class Pruladu extends JFrame {
 		radioB_Holodulnuku.setFont(new Font("Times New Roman", Font.ITALIC, 17));
 		radioB_Holodulnuku.setForeground(Color.YELLOW);
 		radioB_Holodulnuku.setOpaque(false);
-		radioB_Holodulnuku.setBounds(589, 93, 193, 25);
+		radioB_Holodulnuku.setBounds(585, 93, 201, 25);
 		getContentPane().add(radioB_Holodulnuku);
 		radioB_Holodulnuku.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -87,7 +87,7 @@ public class Pruladu extends JFrame {
 		radioB_Konducioneru.setFont(new Font("Times New Roman", Font.ITALIC, 17));
 		radioB_Konducioneru.setForeground(Color.YELLOW);
 		radioB_Konducioneru.setOpaque(false);
-		radioB_Konducioneru.setBounds(589, 135, 193, 25);
+		radioB_Konducioneru.setBounds(585, 135, 201, 25);
 		getContentPane().add(radioB_Konducioneru);
 		radioB_Konducioneru.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -105,7 +105,7 @@ public class Pruladu extends JFrame {
 		radioB_Plutu.setFont(new Font("Times New Roman", Font.ITALIC, 17));
 		radioB_Plutu.setForeground(Color.YELLOW);
 		radioB_Plutu.setOpaque(false);
-		radioB_Plutu.setBounds(589, 182, 193, 25);
+		radioB_Plutu.setBounds(585, 182, 201, 25);
 		getContentPane().add(radioB_Plutu);
 		radioB_Plutu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -124,7 +124,7 @@ public class Pruladu extends JFrame {
 		radioB_PralniMahun.setFont(new Font("Times New Roman", Font.ITALIC, 17));
 		radioB_PralniMahun.setForeground(Color.YELLOW);
 		radioB_PralniMahun.setOpaque(false);
-		radioB_PralniMahun.setBounds(589, 228, 193, 25);
+		radioB_PralniMahun.setBounds(585, 228, 201, 25);
 		getContentPane().add(radioB_PralniMahun);
 		radioB_PralniMahun.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -140,7 +140,7 @@ public class Pruladu extends JFrame {
 		radioB_KompTel.setFont(new Font("Times New Roman", Font.ITALIC, 17));
 		radioB_KompTel.setForeground(Color.YELLOW);
 		radioB_KompTel.setOpaque(false);
-		radioB_KompTel.setBounds(589, 273, 193, 25);
+		radioB_KompTel.setBounds(585, 273, 201, 25);
 		getContentPane().add(radioB_KompTel);
 		radioB_KompTel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
