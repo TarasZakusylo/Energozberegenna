@@ -127,7 +127,7 @@ public class ElektroenergiaOputuvanna extends JFrame {
 		l_putanna2.setBounds(28, 156, 727, 30);
 		getContentPane().add(l_putanna2);
 
-		l_putanna4 = new JLabel("Якого кольору Ваш інтерє'р ?");
+		l_putanna4 = new JLabel("Якого кольору Ваш інтер'єр ?");
 		l_putanna4.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna4.setFont(new Font("Times New Roman", Font.BOLD, 20));
 		l_putanna4.setBounds(28, 303, 727, 30);
@@ -216,7 +216,7 @@ public class ElektroenergiaOputuvanna extends JFrame {
 		slider_putanna5.setBounds(8, 406, 770, 26);
 		getContentPane().add(slider_putanna5);
 
-		l_slider_putanna5_1 = new JLabel("Не викоритовую");
+		l_slider_putanna5_1 = new JLabel("Не використовую");
 		l_slider_putanna5_1.setForeground(Color.BLACK);
 		l_slider_putanna5_1.setFont(new Font("Times New Roman", Font.ITALIC, 18));
 		l_slider_putanna5_1.setBounds(8, 432, 157, 17);

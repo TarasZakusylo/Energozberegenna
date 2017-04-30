@@ -291,7 +291,7 @@ public class TeploOputuvanna1 extends JFrame {
 
 					}
 				} else {
-					if (i_putanna_grup1 == 0 || i_slider_putanna3Var2 == 0) {
+					if (i_putanna_grup1 == 0) {
 						JOptionPane.showMessageDialog(null, "Помилка введення !");
 					} else {
 

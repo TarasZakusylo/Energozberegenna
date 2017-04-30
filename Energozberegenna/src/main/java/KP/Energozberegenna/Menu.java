@@ -77,7 +77,7 @@ public class Menu extends JFrame {
 		b_Pruladu = new JButton("Прилади");
 		b_Pruladu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new PruladuOputuvanna("Приладозбереження");
+				new Pruladu("Приладозбереження");
 				setVisible(false);
 			}
 		});

@@ -220,7 +220,7 @@ public class TeploOputuvanna extends JFrame {
 		group_putanna5.add(radioB_putanna5_1);
 		group_putanna5.add(radioB_putanna5_2);
 
-		b_Gotovo = new JButton("Готово");
+		b_Gotovo = new JButton("Далі");
 		b_Gotovo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 

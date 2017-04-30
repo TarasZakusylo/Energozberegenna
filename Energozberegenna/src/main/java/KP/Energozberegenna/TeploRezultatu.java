@@ -311,7 +311,7 @@ public class TeploRezultatu extends JFrame {
 
 		if (d_gustotaNaselenna < 12) {
 			JOptionPane.showMessageDialog(null,
-					"На жаль, Ваше житло затісне для вашої родини.\nВам варто розшорюватись.");
+					"На жаль, Ваше житло затісне для вашої родини.\nВам варто розширюватись.");
 		}
 
 		if (d_gustotaNaselenna >= 30 && i_putanna2_1 > 1) {

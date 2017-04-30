@@ -14,7 +14,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
 
-public class PruladuOputuvanna extends JFrame {
+public class Pruladu extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
@@ -32,7 +32,7 @@ public class PruladuOputuvanna extends JFrame {
 	private JLabel l_fonVodaRecomendacii;
 	private JLabel l_Kartunka;
 
-	public PruladuOputuvanna(String s) {
+	public Pruladu(String s) {
 		super(s);
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -136,7 +136,7 @@ public class PruladuOputuvanna extends JFrame {
 			}
 		});
 
-		radioB_KompTel = new JRadioButton("Коп'ютери, телефони");
+		radioB_KompTel = new JRadioButton("Комп'ютери, телефони");
 		radioB_KompTel.setFont(new Font("Times New Roman", Font.ITALIC, 17));
 		radioB_KompTel.setForeground(Color.YELLOW);
 		radioB_KompTel.setOpaque(false);
