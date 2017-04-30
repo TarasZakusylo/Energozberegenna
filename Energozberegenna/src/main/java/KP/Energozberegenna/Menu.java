@@ -4,6 +4,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.AbstractButton;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -22,6 +23,7 @@ public class Menu extends JFrame {
 	private JButton b_Pomulku;
 	private JLabel l_Zakk;
 	private JLabel l_logo;
+	private JButton b_AlternatuvnaEnergia;
 
 	public Menu(String s) {
 		super(s);
@@ -47,7 +49,7 @@ public class Menu extends JFrame {
 			}
 		});
 		b_Teplo.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		b_Teplo.setBounds(12, 261, 202, 46);
+		b_Teplo.setBounds(34, 237, 258, 46);
 		getContentPane().add(b_Teplo);
 
 		b_Elektroenergia = new JButton("Електроенергія");
@@ -58,7 +60,7 @@ public class Menu extends JFrame {
 			}
 		});
 		b_Elektroenergia.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		b_Elektroenergia.setBounds(580, 261, 202, 46);
+		b_Elektroenergia.setBounds(264, 125, 258, 46);
 		getContentPane().add(b_Elektroenergia);
 
 		b_Voda = new JButton("Вода");
@@ -69,7 +71,7 @@ public class Menu extends JFrame {
 			}
 		});
 		b_Voda.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		b_Voda.setBounds(71, 366, 202, 46);
+		b_Voda.setBounds(34, 366, 258, 46);
 		getContentPane().add(b_Voda);
 
 		b_Pruladu = new JButton("Прилади");
@@ -79,8 +81,19 @@ public class Menu extends JFrame {
 				setVisible(false);
 			}
 		});
+		
+		b_AlternatuvnaEnergia = new JButton("Альтернативна енергія");
+		b_AlternatuvnaEnergia.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new AlternatuvnaEnergia("Альтернативна енергія");
+				setVisible(false);
+			}
+		});
+		b_AlternatuvnaEnergia.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		b_AlternatuvnaEnergia.setBounds(494, 237, 258, 46);
+		getContentPane().add(b_AlternatuvnaEnergia);
 		b_Pruladu.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		b_Pruladu.setBounds(505, 366, 202, 46);
+		b_Pruladu.setBounds(494, 366, 258, 46);
 		getContentPane().add(b_Pruladu);
 
 		b_Pomulku = new JButton("Помилки");
@@ -91,7 +104,7 @@ public class Menu extends JFrame {
 			}
 		});
 		b_Pomulku.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		b_Pomulku.setBounds(292, 464, 202, 46);
+		b_Pomulku.setBounds(264, 465, 258, 46);
 		getContentPane().add(b_Pomulku);
 
 		l_Zakk = new JLabel("");

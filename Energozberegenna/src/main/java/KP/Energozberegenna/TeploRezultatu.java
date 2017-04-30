@@ -1,9 +1,11 @@
 package KP.Energozberegenna;
 
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URI;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -41,9 +43,8 @@ public class TeploRezultatu extends JFrame {
 	private JButton b_AlternatuvneOpalenna;
 	private JButton b_Pidtrumka;
 
-	/**
-	 * @wbp.parser.constructor
-	 */
+	Desktop desktop = Desktop.getDesktop();
+
 	public TeploRezultatu(String s, int i_putanna1, int i_putanna2_1, String s_putanna2_2, int i_slider_putanna4,
 			int i_putanna5, int i_putanna_grup1, int i_checkBox_putanna2_1, int i_checkBox_putanna2_2,
 			int i_checkBox_putanna2_3, int i_putanna_grup3, int i_putanna_grup4) {
@@ -201,22 +202,26 @@ public class TeploRezultatu extends JFrame {
 		textPane_Rekomendacia.setFont(new Font("Times New Roman", Font.PLAIN, 17));
 		scrollPane_Rekomendacia.setViewportView(textPane_Rekomendacia);
 		textPane_Rekomendacia.setText(s_Recomendacia);
-		
+
 		b_Pidtrumka = new JButton("Підтримка");
 		b_Pidtrumka.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new PidtrumkaTepla("Підтримка",1);
+				new PidtrumkaTepla("Підтримка", 1);
 				setVisible(false);
 			}
 		});
 		b_Pidtrumka.setBounds(0, 531, 398, 34);
 		getContentPane().add(b_Pidtrumka);
-		
-		b_AlternatuvneOpalenna = new JButton("Альтернативне опалення");
+
+		b_AlternatuvneOpalenna = new JButton("Альтернативні котли");
 		b_AlternatuvneOpalenna.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new AlternatuvaTepla("Альтернативне опалення");
-				setVisible(false);
+				try {
+					desktop.browse(new URI("http://bio.ukrbio.com/ua/articles/7541/"));
+					desktop.browse(new URI("http://vtepli.com.ua/news/yak-vibrati-pravilniy-tverdopalivniy-kotel/"));
+					desktop.browse(new URI("http://ekonomteplo.com.ua/tverdopalyvni-kotly/"));
+				} catch (Exception e1) {
+				}
 			}
 		});
 		b_AlternatuvneOpalenna.setBounds(396, 531, 398, 34);
@@ -396,22 +401,26 @@ public class TeploRezultatu extends JFrame {
 		textPane_Rekomendacia.setFont(new Font("Times New Roman", Font.PLAIN, 17));
 		scrollPane_Rekomendacia.setViewportView(textPane_Rekomendacia);
 		textPane_Rekomendacia.setText(s_Recomendacia);
-		
+
 		b_Pidtrumka = new JButton("Підтримка");
 		b_Pidtrumka.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new PidtrumkaTepla("Підтримка",2);
+				new PidtrumkaTepla("Підтримка", 2);
 				setVisible(false);
 			}
 		});
 		b_Pidtrumka.setBounds(0, 531, 398, 34);
 		getContentPane().add(b_Pidtrumka);
-		
-		b_AlternatuvneOpalenna = new JButton("Альтернативне опалення");
+
+		b_AlternatuvneOpalenna = new JButton("Альтернативні котли");
 		b_AlternatuvneOpalenna.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new AlternatuvaTepla("Альтернативне опалення");
-				setVisible(false);
+				try {
+					desktop.browse(new URI("http://bio.ukrbio.com/ua/articles/7541/"));
+					desktop.browse(new URI("http://vtepli.com.ua/news/yak-vibrati-pravilniy-tverdopalivniy-kotel/"));
+					desktop.browse(new URI("http://ekonomteplo.com.ua/tverdopalyvni-kotly/"));
+				} catch (Exception e1) {
+				}
 			}
 		});
 		b_AlternatuvneOpalenna.setBounds(396, 531, 398, 34);
